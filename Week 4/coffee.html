@@ -3,18 +3,18 @@
 <head>
    <meta charset="utf-8">
    <title>Assignment 4A-2 Coffee Prompter</title>
-   <script>
-	// *********************************************
-	// **    Code Author:   Calvin Cheng
-	// **    Date: 10/30/17
-	// **    Description: Assignment 4A-2 Coffee Prompter
-	// **
-	// **********************************************
-	// **       Change Log
-	// **     10/9/17 – Added header and changelog. Cliff Knopik
-  // **     10/30/17 - Added code for Coffee Prompter
-	// **********************************************
-   </script>
+<script>
+// *********************************************
+// **    Code Author:   Calvin Cheng
+// **    Date: 10/30/17
+// **    Description: Assignment 4A-2 Coffee Prompter
+// **
+// **********************************************
+// **       Change Log
+// **     10/9/17 – Added header and changelog. Cliff Knopik
+// **     10/30/17 - Added code for Coffee Prompter
+// **********************************************
+</script>
 <style>
 table {
     font-family: arial, sans-serif;
@@ -36,7 +36,7 @@ tr:nth-child(even) {
 </head>
 <body>
   <h2>Coffee Options</h2>
-  
+
   <table style = "width:50%">
     <tr>
       <th>Coffee Type</th>
@@ -46,16 +46,68 @@ tr:nth-child(even) {
     <tr>
       <td>
         <form>
-          <input type="radio" name="coffeeType" value="drip" checked>Drip</input><br>
-          <input type="radio" name="coffeeType" value="pour over">Pour Over</input><br>
-          <input type="radio" name="coffeeType" value="americano">Americano</input>
+          <input type="radio" id="cr1" name="coffeeType" value="drip" checked>Drip</input><br>
+          <input type="radio" id="cr2" name="coffeeType" value="pourover">Pour Over</input><br>
+          <input type="radio" id="cr3" name="coffeeType" value="americano">Americano</input>
         </form>
       </td>
-      <td>Milk</td>
-      <td>White Sugar</td>
+      <td>
+        <form>
+          <input type="radio" id="wr1" name="whitenerType" value="milk" checked>Milk</input><br>
+          <input type="radio" id="wr2" name="whitenerType" value="halfnhalf">Half and Half</input><br>
+          <input type="radio" id="wr3" name="whitenerType" value="soy">Soy Milk</input><br>
+          <input type="radio" id="wr4" name="whitenerType" value="none">No Thanks</input>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="sr1" name="sweetenerType" value="whitesugar" checked>White Sugar</input><br>
+          <input type="radio" id="sr2" name="sweetenerType" value="brownsugar">Brown Sugar</input><br>
+          <input type="radio" id="sr3" name="sweetenerType" value="honey">Honey</input><br>
+          <input type="radio" id="sr4" name="whitenerType" value="none">No Thanks</input>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><button id="calcButton">Tabulate my Coffee</button>
+      <p id="myPhrase">Your coffee will cost: </p>
+    </td>
     </tr>
   </table>
 
 
+<script>
+
+var coffeeType = "";
+var whitenerType="";
+var sweetnerType="";
+
+
+document.write(coffeeType);
+
+
+//document.getElementById("calcButton").addEventListener("click", function(){
+
+//});
+
+function getOptions(){
+  if (document.getElementById("cr1").checked){
+      coffeeType=document.getElementById('cr1').value;
+    } else if (document.getElementById('cr2').checked) {
+      coffeeType=document.getElementById('cr2').value;
+    } else {
+      coffeeType=document.getElementById('cr3').value;
+    }
+}
+
+function calcTotal(parmCoffee, parmWhitener, parmSweetener){
+
+}
+
+
+
+</script>
 </body>
 </html>
