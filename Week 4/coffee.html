@@ -14,13 +14,48 @@
 	// **     10/9/17 – Added header and changelog. Cliff Knopik
   // **     10/30/17 - Added code for Coffee Prompter
 	// **********************************************
-
-	
-
-
    </script>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+h2 { font-family: arial,sans-serif;}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 </head>
 <body>
-<p>The HTML goes here</p>
+  <h2>Coffee Options</h2>
+  
+  <table style = "width:50%">
+    <tr>
+      <th>Coffee Type</th>
+      <th>Whitener Type</th>
+      <th>Sweetener Type</th>
+    </tr>
+    <tr>
+      <td>
+        <form>
+          <input type="radio" name="coffeeType" value="drip" checked>Drip</input><br>
+          <input type="radio" name="coffeeType" value="pour over">Pour Over</input><br>
+          <input type="radio" name="coffeeType" value="americano">Americano</input>
+        </form>
+      </td>
+      <td>Milk</td>
+      <td>White Sugar</td>
+    </tr>
+  </table>
+
+
 </body>
 </html>
