@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+ ============================================================================
+ Name        : js100_minesweeper.html
+ Author(s)   : Andrew Stefanich, Calvin Cheng
+ Version     : 1.0 SNAPSHOT
+ Description : Browser-based minesweeper game implementation for UW PCE JS100
+
+ LOG		 : 10-11-2017 (Assignment 01)
+ 					-INIT- added js100_minesweeper.html
+				 	10-18-2017 (Assignment 02 of 07)
+					- Expanded script to prompt for how wide the minefield should be
+					- Display a 0 for each space
+					- basic input validation
+
+ ============================================================================
+ -->
+<head>
+	<title>Minesweeper</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="UW PCE JS100 Minesweeper">
+</head>
+<body>
+	<h1>Minesweeper</h1>
+
+
+	<script type="application/javascript">
+
+//declare username and assign it the value of the user input in the prompt
+			var username = prompt("Please enter your name", "Student");
+//validate that username is not empty, and that username contains something other than "Student"
+			while (!username || username=="Student"){
+				username=prompt("Please enter your name, replacing 'Student' ", "Student");
+			}
+			alert("Welcome " + username);
+//declare filedWidth and assign it the value of the user prompt
+			var fieldWidth = prompt("Please enter the field width, with a minimum of 5", "5");
+//validate that fieldWidth is not empty and that it has a minimum of 5
+			while(!fieldWidth || fieldWidth < 5){
+				fieldWidth = prompt("Please, you must enter a field width 5 or higher to start the game");
+			}
+//Also validate that fieldWidth is a number, otherwise reprompt
+			while(isNaN(fieldWidth)==true){
+			fieldWidth = prompt("You must enter a number!");
+			}
+//loop through and print 0's side by side as many times as indicated by fieldWidth
+			for(i=1; i<=fieldWidth; i++){
+				document.write(0);
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>My First JavaScript</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   YOUR_NAME
+	// **    Date: CURRENT_DATE
+	// **    Description: DESCRIPTION
+	// **
+	// **********************************************
+	// **       Change Log
+	// **     10/9/17 – Added header and changelog. Cliff Knopik
+	// **********************************************
+
+	// Put script here
+function convertToFeet(meters){
+  var feet;
+  feet = Math.round(meters/0.304*10)/10;
+  return feet;
+}
+function convertToMeters(feet){
+  var meters;
+  meters = Math.round(feet*0.304 *10)/10;
+  return meters;
+}
+var meters;
+var feet;
+meters=prompt("enter meters to convert to feet");
+alert(convertToFeet(meters) + "ft");
+feet=prompt("enter feet to convert to meters");
+alert(convertToMeters(feet) + "m");
+
+
+   </script>
+</head>
+<body>
+<p>The HTML goes here</p>
+</body>
+</html>

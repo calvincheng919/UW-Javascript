@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Assignment 3-2 Temperatures in Arrays</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   Calvin Cheng
+	// **    Date: 10/28/17
+	// **    Description: Assignment 3-2 Temperatures in Arrays
+	// **
+	// **********************************************
+	// **     Change Log
+	// **     10/28/17 – Added code for homework
+	// **********************************************
+
+
+//declare variables to be used in the code
+
+  var tempsForWeek = [];
+  var highestTemp=0;
+  var week=0;
+  var i;
+  var j;
+
+//Initialize values for 2D array
+  tempsForWeek[0] = [56, 59, 63, 66, 67, 69, 70, 69, 65, 62, 59, 56]; // Monday
+  tempsForWeek[1] = [57, 59, 61, 64, 67, 69, 70, 71, 71, 69, 67, 64]; // Tuesday
+  tempsForWeek[2] = [58, 60, 62, 64, 66, 68, 69, 70, 70, 69, 62, 57]; // Wednesday
+  tempsForWeek[3] = [57, 56, 69, 62, 65, 66, 68, 68, 70, 69, 59, 52]; // Thursday
+  tempsForWeek[4] = [52, 59, 59, 63, 67, 70, 72, 73, 77, 74, 70, 65]; // Friday
+  tempsForWeek[5] = [60, 58, 62, 64, 69, 70, 74, 75, 77, 77, 74, 72]; // Saturday
+  tempsForWeek[6] = [63, 63, 64, 68, 71, 74, 75, 76, 77, 75, 74, 73]; // Sunday
+
+//Objective 1: find the highest temperature of the week.
+
+//Nested for loops to iterate through all values in the 2D array.
+//compare each temperature to the current highest temperature and retain the higher one as the new high temp.
+  for(i=0;i<tempsForWeek.length-1;i++){
+    for(j=0;j<tempsForWeek[i].length-1;j++ ){
+      if(i===0){
+        highestTemp=tempsForWeek[i][j];
+      }else if (highestTemp < tempsForWeek[i][j] ) {
+        highestTemp=tempsForWeek[i][j];
+      }
+    }
+  }
+
+//Output highest temperature of the week to an alert box and the dev console
+alert("The highest tempereature for week the week is: " + highestTemp + " degrees" );
+console.log("The highest tempereature for week the week is: " + highestTemp + " degrees");
+
+//Objective 2: Create an array of days of the week e.g. ["Monday", "Wednesday"] that hit that high temperature
+//declare all variables needed in code
+var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var daysWithHighestTemp = [];
+var foundHighest=false;
+
+//Nested for loops to iterate through 2D array
+//If there are any temps that match the highest temp, set the day to true
+for(i=0;i<tempsForWeek.length;i++){
+  //reset to false for the next iteration
+  foundHighest=false;
+  for(j=0;j<tempsForWeek[i].length;j++ ){
+
+    if(tempsForWeek[i][j]===highestTemp){
+      foundHighest=true;
+    }
+
+  }
+  if (foundHighest === true){
+    daysWithHighestTemp.push(daysOfWeek[i]);
+  }
+//alert(i + " :" + foundHighest)
+}
+alert("Days with highest Temp: " + daysWithHighestTemp );
+console.log("Days with highest Temp: " + daysWithHighestTemp);
+
+
+   </script>
+</head>
+<body>
+<p>Assignment 3-2 Temperatures in Arrays</p>
+</body>
+</html>

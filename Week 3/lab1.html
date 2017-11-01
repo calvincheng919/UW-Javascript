@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Lab 1 - Week 3</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   YOUR_NAME
+	// **    Date: CURRENT_DATE
+	// **    Description: DESCRIPTION
+	// **
+	// **********************************************
+	// **       Change Log
+	// **     10/9/17 – Added header and changelog. Cliff Knopik
+	// **********************************************
+
+	// Put script here
+	var drinks= ["Old Fashioned", "Dark and Stormy", "Gin and Tonic", "Vodka Martini", "Beer"];
+  var i;
+  for (i=0; i<drinks.length; i++){
+    alert(drinks[i]);
+  }
+  var olddrink3=drinks[3];
+  drinks[3] = prompt("please enter a new drink");
+  for (i=0; i<drinks.length; i++){
+    document.write(drinks[i] + "<br>");
+  }
+
+  document.write(olddrink3 + "was replaced by " + drinks[3]);
+
+   </script>
+</head>
+<body>
+
+</body>
+</html>

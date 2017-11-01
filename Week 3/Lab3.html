@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>My First JavaScript</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   YOUR_NAME
+	// **    Date: CURRENT_DATE
+	// **    Description: DESCRIPTION
+	// **
+	// **********************************************
+	// **       Change Log
+	// **     10/9/17 – Added header and changelog. Cliff Knopik
+	// **********************************************
+
+	// Put script here
+  var names=[];
+
+    for (i=0;i<5;i++){
+
+      names[i]=prompt("Enter Names");
+    }
+
+  names.push(prompt("Enter another name with push"));
+
+  var r=confirm("Would you like to sort the names?");
+  if(r==true){
+    names.sort();
+  }
+
+  document.write(names);
+
+
+   </script>
+</head>
+<body>
+<p>The HTML goes here</p>
+</body>
+</html>

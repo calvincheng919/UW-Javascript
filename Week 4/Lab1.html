@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Lab 1</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   YOUR_NAME
+	// **    Date: CURRENT_DATE
+	// **    Description: DESCRIPTION
+	// **
+	// **********************************************
+	// **       Change Log
+	// **     10/9/17 – Added header and changelog. Cliff Knopik
+	// **********************************************
+
+	// Put script here
+function hello(name){
+    alert("Hi there " + name);
+}
+
+var myNumber=prompt("enter a number and I'll tell you if it' between 1 and 10");
+
+function oneAndten(num){
+var isOneAndten;
+alert(num);
+num=parseInt(num);
+  for (i=0; i<=10; i++) {
+    if (i=== num){
+      isOneAndten=true;
+
+    }
+  }
+  alert(isOneAndten);
+  if(isOneAndten===true){
+    return "Your number is between 1 and 10";
+  } else {
+    return "Your number is NOT beetween 1 and 10";
+  }
+}
+
+document.write(oneAndten(myNumber));
+document.write("<br>");
+//document.write(hello());
+
+
+
+
+   </script>
+</head>
+<body>
+<p>The HTML goes here</p>
+</body>
+</html>

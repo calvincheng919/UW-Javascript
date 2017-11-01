@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Minesweeper</title>
+   <script language="JavaScript">
+	// *********************************************
+	// **    Code Author:   Ryan Fields
+	// **    Date: 10-11-2017
+	// **    Description: Minesweeper
+	// **
+	// **********************************************
+	// **     Change Log
+	// **     10/9/17 – Initial name prompt and alert in browser.
+	// **     Billy Galloway
+    // **     --------------
+	// **     10/17/17 - Added players name to page
+	// **              - Get minefield width
+	// **              - Print 0 for width entered
+    // **              - enforce minimum board width
+	// **              - break if not number
+	// **********************************************
+
+    // Prompt for name in browser.
+    var person = prompt("Welcome to minesweeper:", "Please enter your name");
+
+    //Return name in alert
+    alert("Hello " + person);
+    //Show players name on page
+    document.write("<h1>Minesweeper</h1>");
+    document.write("Player: " + person + "<br><br><br>");
+    
+    /* -------- Week 2 Additions ----------
+     TODO: 
+     Determine the width of the minefield
+     Enforce minimum board width of 5
+    */
+    
+    // Prompt user for playfield width
+    var minefield = 0;
+       
+    while (minefield < 5) {
+        minefield = prompt("Please enter a number for mine field width 5 or greater: ");
+                
+        //Check to ensure minefield greater than or equal to 5
+        if (minefield >= 5) {
+            //Write minefield width
+            for (var i = 0; i < minefield; i++) {
+                document.write("0");
+            } 
+          //keep prompting for width 5 or greater or break if quit entered
+        } else if (minefield == "quit") {
+            break;
+        } else {
+            alert("Please enter a width 5 or greater or type quit to exit.");
+          }
+    }
+    
+
+
+   </script>
+</head>
+<body>
+</body>
+</html>

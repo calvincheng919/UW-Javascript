@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>My First JavaScript</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   YOUR_NAME
+	// **    Date: CURRENT_DATE
+	// **    Description: DESCRIPTION
+	// **
+	// **********************************************
+	// **       Change Log
+	// **     10/9/17 – Added header and changelog. Cliff Knopik
+	// **********************************************
+
+	// Put script here
+
+var food=["pizza"];
+var i=1;
+while(i<=4){
+  food[i]=prompt("Enter food item");
+  i++
+}
+
+
+  document.write(food + "<br>");
+
+
+i=0;
+while(i<2){
+  food.push(prompt("Prompting for 2 more food items"));
+  i++;
+}
+
+document.write(food + "<br>");
+
+   </script>
+</head>
+<body>
+<p>The HTML goes here</p>
+</body>
+</html>

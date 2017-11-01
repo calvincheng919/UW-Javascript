@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Minesweeper</title>
+   <script language="JavaScript">
+	// *********************************************
+	// **    Code Author:   Ryan Fields
+	// **    Date: 10-11-2017
+	// **    Description: Minesweeper
+	// **
+	// **********************************************
+	// **     Change Log
+	// **     10/9/17 – Initial name prompt and alert in browser.
+	// **     Billy Galloway
+    // **     --------------
+	// **     10/17/17 - Added players name to page
+	// **              - Get minefield width
+	// **              - Print 0 for width entered
+    // **              - enforce minimum board width
+	// **              - break if not number
+	// **********************************************
+  // **     Change Log
+	// **     10/24/17 – Add a bunch of code for Assignment 3o7
+	// **     Calvin Cheng
+  // **     --------------
+	// **     10/24/17 - Added an array to store another array
+	// **              - populate the 2D array with 0's
+	// **              - Displayed the contents in the array as wide as it is long
+  // **
+	// **
+	// **********************************************
+    // Prompt for name in browser.
+    var person = prompt("Welcome to minesweeper:", "Please enter your name");
+
+    //Return name in alert
+    alert("Hello " + person);
+    //Show players name on page
+    document.write("<h1>Minesweeper</h1>");
+    document.write("Player: " + person + "<br><br><br>");
+
+    /* -------- Week 2 Additions ----------
+     TODO:
+     Determine the width of the minefield
+     Enforce minimum board width of 5
+    */
+
+//Declare variables used in game
+    var minefield = 0;
+    var l = 0;
+    var w = 0;
+    var fieldarray = [];
+
+//Keep Prompting until user enters a valid number between 5 and 30
+    while (minefield < 5 || minefield >30) {
+      minefield = prompt("Please enter a number for minefield width between 5 and 30: ");
+    }
+//Once user enters a valid number, loop through and assign 0's to the array within the array, and then the array itself, repeat until we reach the length of the minefield
+    if (minefield >= 5 || minefield <= 30) {
+            //Write minefield width
+        for (l = 0; l < minefield; l++) {
+          fieldarray[l]=[];
+
+          for (w=0; w< minefield; w++ ){
+            fieldarray[l][w]=0;
+            document.write(fieldarray[l][w]);
+          }
+          document.write("<br>");
+        }
+    }else {
+      document.write("I'm not really sure what you did there, but you broke the game");
+    }
+
+   </script>
+</head>
+<body>
+</body>
+</html>

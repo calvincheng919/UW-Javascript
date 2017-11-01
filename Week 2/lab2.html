@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>My First JavaScript</title>
+   <script>
+  // *********************************************
+  // **    Code Author:   YOUR_NAME
+  // **    Date: CURRENT_DATE
+  // **    Description: DESCRIPTION
+  // **
+  // **********************************************
+  // **       Change Log
+  // **     10/9/17 – Added header and changelog. Cliff Knopik
+  // **********************************************
+
+  // Put script here
+ var string1=" bottles of beer on the wall <br>";
+ var string2=" bottles of beer <br>";
+ var string3="Take one down, pass it around <br>";
+
+ var i=99
+ while ( i > 0 ) {
+
+   if (i===1) {
+     document.write(i + " bottle of beer on the wall <br>")
+     document.write(i + " bottle of beer <br>")
+     document.write(string3);
+   } else {
+     document.write(i + string1 );
+     document.write(i + string2 );
+     document.write(string3);
+   }
+
+   i=i-1;
+   if (i===1) {
+     document.write(i + " bottle of beer on the wall <br>...<br>")
+   } else {
+     document.write(i + string1 + "..." + "<br>");
+}
+
+}
+
+
+
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

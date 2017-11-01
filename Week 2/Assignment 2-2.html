@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Assignment 2-2 MadLib 1</title>
+
+
+</head>
+<body>
+
+<button id="myButton">Generate a Madlib!</button>
+<p id="myPhrase">No Phrase yet!</p>
+
+<script>
+//create an event handler to listen to a click event
+//execute code when event is triggered.
+document.getElementById("myButton").addEventListener("click", function(){
+//declare arrays to hold all nouns, adverbs, exclaimations, and adjectives
+  var exclaim=["Wow!", "Really?!", "Wait!"];
+  var adverb=["slowly","carefully", "succinctly"];
+  var noun=["beach", "car", "towel"];
+  var adjective=["wonderful", "ugly", "fat"];
+//randomize array indices between 0 and 2, since there are only 3 items
+  var rand1=Math.floor(Math.random() * 3) ;
+  var rand2=Math.floor(Math.random() * 3) ;
+  var rand3=Math.floor(Math.random() * 3) ;
+  var rand4=Math.floor(Math.random() * 3) ;
+//put the phrase into the <p> tag, which has an id of myPhrase
+//concatenate the random items with the fixed items
+//whenever the button is clicked, this code will run and generate a new phrase.
+  document.getElementById("myPhrase").innerHTML =  exclaim[rand1] + " he said "+ adverb[rand2] + " as he jumped into his convertible " + noun[rand3] + " and drove off with his " + adjective[rand4] + " wife.";
+});
+ </script>
+</body>
+</html>

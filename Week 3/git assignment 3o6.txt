@@ -1,0 +1,7 @@
+Git Assignment 3 of 6
+
+https://github.com/betaflight/betaflight-configurator-ng
+
+Betaflight Configurator is a race drone flight controller configuration tool.
+
+I've used Betaflight Configurator in my Chrome apps for the past 2 years now and seems like an interesting project to be a part of. It is constantly changing based on newly released hardware and firmware (flight controller boards and firmware updates to them).
